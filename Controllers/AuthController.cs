@@ -7,7 +7,6 @@ namespace Authorization.Controllers
     using Authorization.Services;
     using System.Linq;
     using Authorization.ViewModels;
-    using Microsoft.AspNetCore.Identity;
 
     [ApiController]
     [Route("api/auth")]

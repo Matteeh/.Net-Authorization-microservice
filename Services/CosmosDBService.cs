@@ -5,8 +5,6 @@ namespace Authorization.Services
     using System.Threading.Tasks;
     using Authorization.Models;
     using Microsoft.Azure.Cosmos;
-    using Microsoft.Azure.Cosmos.Fluent;
-    using Microsoft.Extensions.Configuration;
 
     public class CosmosDbService : ICosmosDbService
     {
