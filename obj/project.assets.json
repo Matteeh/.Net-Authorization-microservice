@@ -2027,11 +2027,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\code\\sandbox\\c-sharp\\authorization-microservice\\authorization-microservice.csproj",
+      "projectUniqueName": "C:\\code\\sandbox\\c-sharp\\authorization-microservice\\authorization-microservice.csproj",
       "projectName": "authorization-microservice",
-      "projectPath": "c:\\code\\sandbox\\c-sharp\\authorization-microservice\\authorization-microservice.csproj",
+      "projectPath": "C:\\code\\sandbox\\c-sharp\\authorization-microservice\\authorization-microservice.csproj",
       "packagesPath": "C:\\Users\\Matte\\.nuget\\packages\\",
-      "outputPath": "c:\\code\\sandbox\\c-sharp\\authorization-microservice\\obj\\",
+      "outputPath": "C:\\code\\sandbox\\c-sharp\\authorization-microservice\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
