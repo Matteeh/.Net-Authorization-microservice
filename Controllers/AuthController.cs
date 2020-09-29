@@ -7,6 +7,9 @@ namespace Authorization.Controllers
     using Authorization.Services;
     using System.Linq;
     using Authorization.ViewModels;
+    using System.Net;
+    using Microsoft.AspNetCore.Authentication.JwtBearer;
+    using Microsoft.AspNetCore.Authorization;
 
     [ApiController]
     [Route("api/auth")]
@@ -78,6 +81,26 @@ namespace Authorization.Controllers
             return BadRequest("Invalid user model");
         }
 
+        [HttpPost("verify")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+        public async Task<ActionResult> verify([Bind("Email,Password")] ApplicationUser user)
+        {
+            var appUserEmail = User
+                .Claims
+                .First(c => c.Type == "Email").Value;
+
+            if (appUserEmail == null)
+            {
+                return Unauthorized();
+            }
+            var appUserExists = await _cosmosDbService.GetUsersAsync($"SELECT * FROM Users u WHERE u.email = \"{appUserEmail}\"");
+
+            if (appUserExists == null)
+            {
+                return Unauthorized();
+            }
+            return NoContent();
+        }
 
 
 
